@@ -8,12 +8,16 @@
 <h3>I thought this would be easy but its not</h3>
 <!-- The `multiple` attribute lets users select multiple files. -->
 <input type="file" id="file-selector" accept=".csv">
-<button id="conversionButton" onclick="ConvertToSQL()">Convert to SQL</button>
+<button id="conversionButton">Convert to SQL</button>
 <script>
+  const element = document.getElementByID("conversionButton")
+  element.addEventLister("click", readSQL);
+
+
   const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
-    console.log(fileList);
+
 
 
 
