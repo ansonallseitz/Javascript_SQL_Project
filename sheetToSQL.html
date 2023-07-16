@@ -6,19 +6,25 @@
 <h1>This is the CSV to SQL input converter</h1>
 <h2>Select a CSV file and it will convert it into SQL input.</h2>
 <h3>I thought this would be easy but its not</h3>
-<!-- The `multiple` attribute lets users select multiple files. -->
+<!-- Input the file  -->
 <input type="file" id="file-selector" accept=".csv">
+
+<!-- convert to SQL Bttn -->
 <button id="conversionButton">Convert to SQL</button>
 <script>
-  const element = document.getElementByID("conversionButton")
-  element.addEventLister("click", readSQL);
+ 
 
 
   const fileSelector = document.getElementById('file-selector');
   fileSelector.addEventListener('change', (event) => {
     const fileList = event.target.files;
 
+  const element = document.getElementByID("conversionButton")
+  element.addEventLister("click", readCSV);
 
+  function readCSV(fileList){
+    
+  }
 
 
   });
